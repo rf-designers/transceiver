@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:rx-new-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -595,4 +594,6 @@ Wire Wire Line
 Connection ~ 6200 6200
 Wire Wire Line
 	6200 6200 6750 6200
+Text Notes 2600 4150 0    50   ~ 0
+Frederic is the best!!!11
 $EndSCHEMATC
