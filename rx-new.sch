@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:rx-new-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -25,36 +24,10 @@ F 3 "http://www.ti.com/lit/gpn/sn74cbt3253" H 3950 2250 50  0001 C CNN
 	1    3950 2250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Transformer:ADT4-6WT TR?
-U 1 1 5F58DF20
-P 2450 1950
-F 0 "TR?" H 2450 2331 50  0000 C CNN
-F 1 "ADT4-6WT" H 2450 2240 50  0000 C CNN
-F 2 "RF_Mini-Circuits:Mini-Circuits_CD636_H4.11mm" H 2450 1600 50  0001 C CNN
-F 3 "https://www.minicircuits.com/pdfs/ADT4-6WT+.pdf" H 2450 1950 50  0001 C CNN
-	1    2450 1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 5F58E35D
-P 1500 1750
-F 0 "C?" V 1271 1750 50  0000 C CNN
-F 1 "0.1u" V 1362 1750 50  0000 C CNN
-F 2 "" H 1500 1750 50  0001 C CNN
-F 3 "~" H 1500 1750 50  0001 C CNN
-	1    1500 1750
-	0    1    1    0   
-$EndComp
 Text GLabel 3550 2250 0    50   Input ~ 0
-CLK_1
+CLK_0
 Text GLabel 3550 2350 0    50   Input ~ 0
-CLK_2
-Text GLabel 3550 1850 0    50   Input ~ 0
-RF_IN_P
-Text GLabel 3550 1950 0    50   Input ~ 0
-RF_IN_N
+CLK_1
 $Comp
 L Device:R_Small_US R?
 U 1 1 5F595166
@@ -88,17 +61,6 @@ Text GLabel 3800 5650 1    50   Input ~ 0
 +Vf
 Text GLabel 4000 6050 2    50   Output ~ 0
 Vbias
-$Comp
-L power:GND #PWR?
-U 1 1 5F5A3FE3
-P 2250 2150
-F 0 "#PWR?" H 2250 1900 50  0001 C CNN
-F 1 "GND" H 2255 1977 50  0001 C CNN
-F 2 "" H 2250 2150 50  0001 C CNN
-F 3 "" H 2250 2150 50  0001 C CNN
-	1    2250 2150
-	0    1    1    0   
-$EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F5A4C34
@@ -141,14 +103,6 @@ Text GLabel 3950 950  1    50   Input ~ 0
 +Vf
 Wire Wire Line
 	3800 6050 4000 6050
-Wire Wire Line
-	1600 1750 1750 1750
-Wire Wire Line
-	1400 1750 1300 1750
-Text GLabel 1300 1750 0    50   Input ~ 0
-RF_IN
-Text GLabel 2650 1950 2    50   Input ~ 0
-Vbias
 $Comp
 L Amplifier_Operational:AD797 U?
 U 1 1 5F5AEA8D
@@ -319,96 +273,81 @@ Text Label 5650 2750 0    50   ~ 0
 Text Label 5650 3150 0    50   ~ 0
 180deg
 $Comp
-L Regulator_Linear:TPS79333-EP U?
-U 1 1 5F5BB1AD
-P 1700 5450
-F 0 "U?" H 1700 5792 50  0000 C CNN
-F 1 "TPS791" H 1700 5701 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1700 5775 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/symlink/tps79333-ep.pdf" H 1700 5500 50  0001 C CNN
-	1    1700 5450
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C_Small C?
 U 1 1 5F5BB701
-P 1250 5650
-F 0 "C?" H 1158 5604 50  0000 R CNN
-F 1 "0.1u" H 1158 5695 50  0000 R CNN
-F 2 "" H 1250 5650 50  0001 C CNN
-F 3 "~" H 1250 5650 50  0001 C CNN
-	1    1250 5650
-	-1   0    0    1   
+P 900 5600
+F 0 "C?" H 808 5554 50  0000 R CNN
+F 1 "0.1u" H 808 5645 50  0000 R CNN
+F 2 "" H 900 5600 50  0001 C CNN
+F 3 "~" H 900 5600 50  0001 C CNN
+	1    900  5600
+	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F5BBC40
-P 1700 5750
-F 0 "#PWR?" H 1700 5500 50  0001 C CNN
-F 1 "GND" H 1705 5577 50  0001 C CNN
-F 2 "" H 1700 5750 50  0001 C CNN
-F 3 "" H 1700 5750 50  0001 C CNN
-	1    1700 5750
+P 1450 6000
+F 0 "#PWR?" H 1450 5750 50  0001 C CNN
+F 1 "GND" H 1455 5827 50  0001 C CNN
+F 2 "" H 1450 6000 50  0001 C CNN
+F 3 "" H 1450 6000 50  0001 C CNN
+	1    1450 6000
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F5BBFFF
-P 1400 5450
-F 0 "#PWR?" H 1400 5200 50  0001 C CNN
-F 1 "GND" H 1405 5277 50  0001 C CNN
-F 2 "" H 1400 5450 50  0001 C CNN
-F 3 "" H 1400 5450 50  0001 C CNN
-	1    1400 5450
+P 1050 5500
+F 0 "#PWR?" H 1050 5250 50  0001 C CNN
+F 1 "GND" H 1055 5327 50  0001 C CNN
+F 2 "" H 1050 5500 50  0001 C CNN
+F 3 "" H 1050 5500 50  0001 C CNN
+	1    1050 5500
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1250 5550 1250 5350
+	900  5500 900  5300
 Wire Wire Line
-	1250 5350 1400 5350
+	900  5300 1050 5300
 $Comp
 L power:GND #PWR?
 U 1 1 5F5BCFF9
-P 1250 5750
-F 0 "#PWR?" H 1250 5500 50  0001 C CNN
-F 1 "GND" H 1255 5577 50  0001 C CNN
-F 2 "" H 1250 5750 50  0001 C CNN
-F 3 "" H 1250 5750 50  0001 C CNN
-	1    1250 5750
+P 900 5700
+F 0 "#PWR?" H 900 5450 50  0001 C CNN
+F 1 "GND" H 905 5527 50  0001 C CNN
+F 2 "" H 900 5700 50  0001 C CNN
+F 3 "" H 900 5700 50  0001 C CNN
+	1    900  5700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5F5BEABE
-P 2150 5650
-F 0 "C?" H 2058 5604 50  0000 R CNN
-F 1 "0.01u" H 2058 5695 50  0000 R CNN
-F 2 "" H 2150 5650 50  0001 C CNN
-F 3 "~" H 2150 5650 50  0001 C CNN
-	1    2150 5650
+P 2100 5800
+F 0 "C?" H 2008 5754 50  0000 R CNN
+F 1 "0.01u" H 2008 5845 50  0000 R CNN
+F 2 "" H 2100 5800 50  0001 C CNN
+F 3 "~" H 2100 5800 50  0001 C CNN
+	1    2100 5800
 	1    0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F5BF632
-P 2150 5750
-F 0 "#PWR?" H 2150 5500 50  0001 C CNN
-F 1 "GND" H 2155 5577 50  0001 C CNN
-F 2 "" H 2150 5750 50  0001 C CNN
-F 3 "" H 2150 5750 50  0001 C CNN
-	1    2150 5750
+P 2100 5900
+F 0 "#PWR?" H 2100 5650 50  0001 C CNN
+F 1 "GND" H 2105 5727 50  0001 C CNN
+F 2 "" H 2100 5900 50  0001 C CNN
+F 3 "" H 2100 5900 50  0001 C CNN
+	1    2100 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2000 5450 2150 5450
-Wire Wire Line
-	2150 5450 2150 5550
-Wire Wire Line
-	1250 5350 1050 5350
-Connection ~ 1250 5350
-Text GLabel 1050 5350 0    50   Input ~ 0
+	900  5300 800  5300
+Connection ~ 900  5300
+Text GLabel 800  5300 0    50   Input ~ 0
 +12V
-Text GLabel 3250 5350 2    50   Output ~ 0
+Text GLabel 3050 5300 2    50   Output ~ 0
 +Vf
 Text Notes 2400 4850 0    50   ~ 0
 Power section
@@ -441,9 +380,9 @@ Wire Wire Line
 Wire Wire Line
 	2100 3350 2100 3250
 Text GLabel 2100 3250 1    50   Output ~ 0
-CLK_1
+CLK_0
 Text GLabel 3000 3550 2    50   Output ~ 0
-CLK_2
+CLK_1
 Wire Wire Line
 	3950 3050 4050 3050
 Text GLabel 3950 3150 3    50   Input ~ 0
@@ -453,49 +392,41 @@ Wire Wire Line
 Connection ~ 3950 3050
 Wire Wire Line
 	3950 3050 3950 3150
-Wire Wire Line
-	2000 5350 2450 5350
 $Comp
 L Device:R_Small_US R?
 U 1 1 5F5CBA1F
-P 2450 5450
-F 0 "R?" V 2245 5450 50  0000 C CNN
-F 1 "100k" V 2336 5450 50  0000 C CNN
-F 2 "" H 2450 5450 50  0001 C CNN
-F 3 "~" H 2450 5450 50  0001 C CNN
-	1    2450 5450
+P 2250 5400
+F 0 "R?" V 2045 5400 50  0000 C CNN
+F 1 "100k" V 2136 5400 50  0000 C CNN
+F 2 "" H 2250 5400 50  0001 C CNN
+F 3 "~" H 2250 5400 50  0001 C CNN
+	1    2250 5400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small_US R?
 U 1 1 5F5CD9E0
-P 2450 5650
-F 0 "R?" V 2245 5650 50  0000 C CNN
-F 1 "100k" V 2336 5650 50  0000 C CNN
-F 2 "" H 2450 5650 50  0001 C CNN
-F 3 "~" H 2450 5650 50  0001 C CNN
-	1    2450 5650
+P 2250 5600
+F 0 "R?" V 2045 5600 50  0000 C CNN
+F 1 "100k" V 2136 5600 50  0000 C CNN
+F 2 "" H 2250 5600 50  0001 C CNN
+F 3 "~" H 2250 5600 50  0001 C CNN
+	1    2250 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F5CF9FC
-P 2450 5750
-F 0 "#PWR?" H 2450 5500 50  0001 C CNN
-F 1 "GND" H 2455 5577 50  0001 C CNN
-F 2 "" H 2450 5750 50  0001 C CNN
-F 3 "" H 2450 5750 50  0001 C CNN
-	1    2450 5750
+P 2250 5700
+F 0 "#PWR?" H 2250 5450 50  0001 C CNN
+F 1 "GND" H 2255 5527 50  0001 C CNN
+F 2 "" H 2250 5700 50  0001 C CNN
+F 3 "" H 2250 5700 50  0001 C CNN
+	1    2250 5700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2450 5550 2250 5550
-Wire Wire Line
-	2250 5550 2250 5500
-Wire Wire Line
-	2250 5500 2000 5500
-Connection ~ 2450 5550
-Text Notes 1200 6150 0    50   ~ 0
+Connection ~ 2250 5500
+Text Notes 700  6350 0    50   ~ 0
 TPS791 handles higher input voltages\nNeed to add FB pin\n+Vf = 4V + 3.6V/2
 Text GLabel 3800 6350 3    50   Input ~ 0
 -Vf
@@ -645,66 +576,6 @@ $EndComp
 Text GLabel 6800 2250 1    50   Input ~ 0
 +12V
 $Comp
-L Diode:BAT42 D?
-U 1 1 5F6685CF
-P 1750 1900
-F 0 "D?" V 1704 1979 50  0000 L CNN
-F 1 "BAT42" V 1795 1979 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1750 1725 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85660/bat42.pdf" H 1750 1900 50  0001 C CNN
-	1    1750 1900
-	0    1    1    0   
-$EndComp
-$Comp
-L Diode:BAT42 D?
-U 1 1 5F66A798
-P 2000 1900
-F 0 "D?" V 2046 1821 50  0000 R CNN
-F 1 "BAT42" V 1955 1821 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 2000 1725 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85660/bat42.pdf" H 2000 1900 50  0001 C CNN
-	1    2000 1900
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F672E8C
-P 1750 2050
-F 0 "#PWR?" H 1750 1800 50  0001 C CNN
-F 1 "GND" H 1755 1877 50  0001 C CNN
-F 2 "" H 1750 2050 50  0001 C CNN
-F 3 "" H 1750 2050 50  0001 C CNN
-	1    1750 2050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F674BBB
-P 2000 2050
-F 0 "#PWR?" H 2000 1800 50  0001 C CNN
-F 1 "GND" H 2005 1877 50  0001 C CNN
-F 2 "" H 2000 2050 50  0001 C CNN
-F 3 "" H 2000 2050 50  0001 C CNN
-	1    2000 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1750 1750 2000 1750
-Connection ~ 1750 1750
-Connection ~ 2000 1750
-Wire Wire Line
-	2000 1750 2250 1750
-Text Notes 1350 2350 0    50   ~ 0
-Need to be RF diodes for protection
-Wire Wire Line
-	2650 1750 3550 1750
-Wire Wire Line
-	3550 1750 3550 1850
-Wire Wire Line
-	2650 2150 3550 2150
-Wire Wire Line
-	3550 2150 3550 1950
-$Comp
 L Device:CP_Small C?
 U 1 1 5F67D93E
 P 4150 1050
@@ -810,87 +681,74 @@ Connection ~ 3600 6050
 $Comp
 L Device:C_Small C?
 U 1 1 5F6AF8DB
-P 2650 5550
-F 0 "C?" V 2650 5950 50  0000 C CNN
-F 1 "0.1u" V 2650 6150 50  0000 C CNN
-F 2 "" H 2650 5550 50  0001 C CNN
-F 3 "~" H 2650 5550 50  0001 C CNN
-	1    2650 5550
+P 2450 5500
+F 0 "C?" V 2450 5900 50  0000 C CNN
+F 1 "0.1u" V 2450 6100 50  0000 C CNN
+F 2 "" H 2450 5500 50  0001 C CNN
+F 3 "~" H 2450 5500 50  0001 C CNN
+	1    2450 5500
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	2650 5350 2650 5450
 $Comp
 L Device:CP_Small C?
 U 1 1 5F6AF8E2
-P 3050 5550
-F 0 "C?" V 3050 5100 50  0000 L CNN
-F 1 "47u" V 3050 4900 50  0000 L CNN
-F 2 "" H 3050 5550 50  0001 C CNN
-F 3 "~" H 3050 5550 50  0001 C CNN
-	1    3050 5550
+P 2850 5500
+F 0 "C?" V 2850 5050 50  0000 L CNN
+F 1 "47u" V 2850 4850 50  0000 L CNN
+F 2 "" H 2850 5500 50  0001 C CNN
+F 3 "~" H 2850 5500 50  0001 C CNN
+	1    2850 5500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 5450 3050 5350
+	2850 5400 2850 5300
 $Comp
 L Device:C_Small C?
 U 1 1 5F6AF8E9
-P 2850 5550
-F 0 "C?" V 2850 5950 50  0000 C CNN
-F 1 "1n" V 2850 6150 50  0000 C CNN
-F 2 "" H 2850 5550 50  0001 C CNN
-F 3 "~" H 2850 5550 50  0001 C CNN
-	1    2850 5550
+P 2650 5500
+F 0 "C?" V 2650 5900 50  0000 C CNN
+F 1 "1n" V 2650 6100 50  0000 C CNN
+F 2 "" H 2650 5500 50  0001 C CNN
+F 3 "~" H 2650 5500 50  0001 C CNN
+	1    2650 5500
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2850 5350 2850 5450
-Wire Wire Line
-	3050 5350 2850 5350
-Connection ~ 2850 5350
-Wire Wire Line
-	2850 5350 2650 5350
-Wire Wire Line
-	3050 5350 3250 5350
-Connection ~ 3050 5350
+	2850 5300 3050 5300
+Connection ~ 2850 5300
 $Comp
 L power:GND #PWR?
 U 1 1 5F6B2B17
-P 2650 5650
-F 0 "#PWR?" H 2650 5400 50  0001 C CNN
-F 1 "GND" H 2655 5477 50  0001 C CNN
-F 2 "" H 2650 5650 50  0001 C CNN
-F 3 "" H 2650 5650 50  0001 C CNN
-	1    2650 5650
+P 2450 5600
+F 0 "#PWR?" H 2450 5350 50  0001 C CNN
+F 1 "GND" H 2455 5427 50  0001 C CNN
+F 2 "" H 2450 5600 50  0001 C CNN
+F 3 "" H 2450 5600 50  0001 C CNN
+	1    2450 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F6B4EB7
-P 2850 5650
-F 0 "#PWR?" H 2850 5400 50  0001 C CNN
-F 1 "GND" H 2855 5477 50  0001 C CNN
-F 2 "" H 2850 5650 50  0001 C CNN
-F 3 "" H 2850 5650 50  0001 C CNN
-	1    2850 5650
+P 2650 5600
+F 0 "#PWR?" H 2650 5350 50  0001 C CNN
+F 1 "GND" H 2655 5427 50  0001 C CNN
+F 2 "" H 2650 5600 50  0001 C CNN
+F 3 "" H 2650 5600 50  0001 C CNN
+	1    2650 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F6B72AA
-P 3050 5650
-F 0 "#PWR?" H 3050 5400 50  0001 C CNN
-F 1 "GND" H 3055 5477 50  0001 C CNN
-F 2 "" H 3050 5650 50  0001 C CNN
-F 3 "" H 3050 5650 50  0001 C CNN
-	1    3050 5650
+P 2850 5600
+F 0 "#PWR?" H 2850 5350 50  0001 C CNN
+F 1 "GND" H 2855 5427 50  0001 C CNN
+F 2 "" H 2850 5600 50  0001 C CNN
+F 3 "" H 2850 5600 50  0001 C CNN
+	1    2850 5600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2450 5350 2650 5350
-Connection ~ 2450 5350
-Connection ~ 2650 5350
 Text GLabel 2950 6750 2    50   Output ~ 0
 -Vf
 $Comp
@@ -976,4 +834,166 @@ $EndComp
 Wire Wire Line
 	2250 6750 2350 6750
 Connection ~ 2350 6750
+$Comp
+L custom_library:TPS79101DBVREP U?
+U 1 1 5F5CD74A
+P 950 5300
+F 0 "U?" H 1450 5565 50  0000 C CNN
+F 1 "TPS79101DBVREP" H 1450 5474 50  0000 C CNN
+F 2 "Texas_Instruments-TPS79101DBVREP-*" H 950 5700 50  0001 L CNN
+F 3 "http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TPS79101-EP&fileType=pdf" H 950 5800 50  0001 L CNN
+F 4 "2" H 950 5900 50  0001 L CNN "Accuracy"
+F 5 "MO-178" H 950 6000 50  0001 L CNN "Code  JEDEC"
+F 6 "Manufacturer URL" H 950 6100 50  0001 L CNN "Component Link 1 Description"
+F 7 "http://www.ti.com/" H 950 6200 50  0001 L CNN "Component Link 1 URL"
+F 8 "Package Specification" H 950 6300 50  0001 L CNN "Component Link 3 Description"
+F 9 "http://www.ti.com/litv/pdf/mpds026h" H 950 6400 50  0001 L CNN "Component Link 3 URL"
+F 10 "SGLS161A" H 950 6500 50  0001 L CNN "Datasheet Version"
+F 11 "0.1" H 950 6600 50  0001 L CNN "Iout Max A"
+F 12 "0.2" H 950 6700 50  0001 L CNN "Iq Typm A"
+F 13 "Surface Mount" H 950 6800 50  0001 L CNN "Mounting Technology"
+F 14 "6-Pin Plastic Small Outline, Body 1.60 Ãƒâ€” 2.90 mm, Pitch 0.95 mm" H 950 6900 50  0001 L CNN "Package Description"
+F 15 "4073253-5/K" H 950 7000 50  0001 L CNN "Package Version"
+F 16 "Single Channel LDO" H 950 7100 50  0001 L CNN "Sub Family"
+F 17 "38" H 950 7200 50  0001 L CNN "Vdo Typm V"
+F 18 "5.5" H 950 7300 50  0001 L CNN "Vin Max V"
+F 19 "2.7" H 950 7400 50  0001 L CNN "Vin Min V"
+F 20 "5.5" H 950 7500 50  0001 L CNN "Vout AdjMaxV"
+F 21 "1.2" H 950 7600 50  0001 L CNN "Vout AdjMinV"
+F 22 "IC" H 950 7700 50  0001 L CNN "category"
+F 23 "1505890" H 950 7800 50  0001 L CNN "ciiva ids"
+F 24 "ca06707bcb5ff32a" H 950 7900 50  0001 L CNN "library id"
+F 25 "Texas Instruments" H 950 8000 50  0001 L CNN "manufacturer"
+F 26 "DBV0006A" H 950 8100 50  0001 L CNN "package"
+F 27 "1464578659" H 950 8200 50  0001 L CNN "release date"
+F 28 "Yes" H 950 8300 50  0001 L CNN "rohs"
+F 29 "E89202BC-B87B-4135-AE28-EC4511A6FCC2" H 950 8400 50  0001 L CNN "vault revision"
+F 30 "yes" H 950 8500 50  0001 L CNN "imported"
+	1    950  5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 5700 2100 5700
+Wire Wire Line
+	1850 5300 2250 5300
+Connection ~ 2250 5300
+Wire Wire Line
+	2250 5300 2450 5300
+Wire Wire Line
+	1850 5500 2250 5500
+Wire Wire Line
+	2450 5300 2450 5400
+Connection ~ 2450 5300
+Wire Wire Line
+	2450 5300 2650 5300
+Wire Wire Line
+	2650 5300 2650 5400
+Connection ~ 2650 5300
+Wire Wire Line
+	2650 5300 2850 5300
+Wire Wire Line
+	2600 2050 3500 2050
+Wire Wire Line
+	2600 1650 3500 1650
+Text Notes 1350 2350 0    50   ~ 0
+Need to be RF diodes for protection
+Wire Wire Line
+	1950 1650 2200 1650
+Connection ~ 1950 1650
+Connection ~ 1700 1650
+Wire Wire Line
+	1700 1650 1950 1650
+$Comp
+L power:GND #PWR?
+U 1 1 5F674BBB
+P 1950 1950
+F 0 "#PWR?" H 1950 1700 50  0001 C CNN
+F 1 "GND" H 1955 1777 50  0001 C CNN
+F 2 "" H 1950 1950 50  0001 C CNN
+F 3 "" H 1950 1950 50  0001 C CNN
+	1    1950 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F672E8C
+P 1700 1950
+F 0 "#PWR?" H 1700 1700 50  0001 C CNN
+F 1 "GND" H 1705 1777 50  0001 C CNN
+F 2 "" H 1700 1950 50  0001 C CNN
+F 3 "" H 1700 1950 50  0001 C CNN
+	1    1700 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAT42 D?
+U 1 1 5F66A798
+P 1950 1800
+F 0 "D?" V 1996 1721 50  0000 R CNN
+F 1 "BAT42" V 1905 1721 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1950 1625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/85660/bat42.pdf" H 1950 1800 50  0001 C CNN
+	1    1950 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:BAT42 D?
+U 1 1 5F6685CF
+P 1700 1800
+F 0 "D?" V 1654 1879 50  0000 L CNN
+F 1 "BAT42" V 1745 1879 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1700 1625 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/85660/bat42.pdf" H 1700 1800 50  0001 C CNN
+	1    1700 1800
+	0    -1   1    0   
+$EndComp
+Text GLabel 2600 1850 2    50   Input ~ 0
+Vbias
+Text GLabel 1250 1650 0    50   Input ~ 0
+RF_IN
+Wire Wire Line
+	1350 1650 1250 1650
+Wire Wire Line
+	1550 1650 1700 1650
+$Comp
+L power:GND #PWR?
+U 1 1 5F5A3FE3
+P 2200 2050
+F 0 "#PWR?" H 2200 1800 50  0001 C CNN
+F 1 "GND" H 2205 1877 50  0001 C CNN
+F 2 "" H 2200 2050 50  0001 C CNN
+F 3 "" H 2200 2050 50  0001 C CNN
+	1    2200 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5F58E35D
+P 1450 1650
+F 0 "C?" V 1221 1650 50  0000 C CNN
+F 1 "0.1u" V 1312 1650 50  0000 C CNN
+F 2 "" H 1450 1650 50  0001 C CNN
+F 3 "~" H 1450 1650 50  0001 C CNN
+	1    1450 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L Transformer:ADT4-6WT TR?
+U 1 1 5F58DF20
+P 2400 1850
+F 0 "TR?" H 2400 2231 50  0000 C CNN
+F 1 "ADT4-6WT" H 2400 2140 50  0000 C CNN
+F 2 "RF_Mini-Circuits:Mini-Circuits_CD636_H4.11mm" H 2400 1500 50  0001 C CNN
+F 3 "https://www.minicircuits.com/pdfs/ADT4-6WT+.pdf" H 2400 1850 50  0001 C CNN
+	1    2400 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 1650 3500 1850
+Wire Wire Line
+	3500 1850 3550 1850
+Wire Wire Line
+	3500 2050 3500 1950
+Wire Wire Line
+	3500 1950 3550 1950
 $EndSCHEMATC
