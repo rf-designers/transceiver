@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:rx-new-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -61,28 +62,6 @@ Text GLabel 4000 6350 1    50   Input ~ 0
 +Vf
 Text GLabel 4200 6750 2    50   Output ~ 0
 Vbias
-$Comp
-L power:GND #PWR?
-U 1 1 5F5A4C34
-P 3550 2350
-F 0 "#PWR?" H 3550 2100 50  0001 C CNN
-F 1 "GND" H 3555 2177 50  0001 C CNN
-F 2 "" H 3550 2350 50  0001 C CNN
-F 3 "" H 3550 2350 50  0001 C CNN
-	1    3550 2350
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F5A51E6
-P 3550 2450
-F 0 "#PWR?" H 3550 2200 50  0001 C CNN
-F 1 "GND" H 3555 2277 50  0001 C CNN
-F 2 "" H 3550 2450 50  0001 C CNN
-F 3 "" H 3550 2450 50  0001 C CNN
-	1    3550 2450
-	0    1    1    0   
-$EndComp
 $Comp
 L Device:C_Small C?
 U 1 1 5F5A574D
@@ -344,21 +323,10 @@ F 3 "" H 3150 5900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3150 5700
-Text Notes 700  6350 0    50   ~ 0
-+Vf = 4V + 2.5V
+Text Notes 3500 5400 0    50   ~ 0
++Vf = 6.5V
 Text GLabel 4000 7050 3    50   Input ~ 0
 -Vf
-$Comp
-L Transistor_BJT:BC858 Q?
-U 1 1 5F5E336C
-P 1750 6950
-F 0 "Q?" H 1941 6996 50  0000 L CNN
-F 1 "BC858" H 1941 6905 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1950 6875 50  0001 L CIN
-F 3 "http://www.fairchildsemi.com/ds/BC/BC856.pdf" H 1750 6950 50  0001 L CNN
-	1    1750 6950
-	1    0    0    1   
-$EndComp
 $Comp
 L Device:R_Small_US R?
 U 1 1 5F5E7D14
@@ -434,32 +402,8 @@ F 3 "~" H 2150 6750 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1850 6750 2050 6750
-Connection ~ 1850 6750
-$Comp
-L Device:CP_Small C?
-U 1 1 5F615B55
-P 1550 7050
-F 0 "C?" H 1350 7100 50  0000 L CNN
-F 1 "1u" H 1350 7000 50  0000 L CNN
-F 2 "" H 1550 7050 50  0001 C CNN
-F 3 "~" H 1550 7050 50  0001 C CNN
-	1    1550 7050
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F615B5B
-P 1550 7150
-F 0 "#PWR?" H 1550 6900 50  0001 C CNN
-F 1 "GND" H 1555 6977 50  0001 C CNN
-F 2 "" H 1550 7150 50  0001 C CNN
-F 3 "" H 1550 7150 50  0001 C CNN
-	1    1550 7150
-	1    0    0    -1  
-$EndComp
-Connection ~ 1550 6950
-Text Notes 1200 7400 0    50   ~ 0
--Vf = 4V - 2.5V
+Text Notes 2500 6650 0    50   ~ 0
+-Vf = 1.5V
 Text Notes 800  7700 0    50   ~ 0
 Still need to define all resistor values to generate +Vf and -Vf
 Text GLabel 4250 1300 2    50   Input ~ 0
@@ -788,7 +732,7 @@ Wire Wire Line
 Wire Wire Line
 	2600 1450 3500 1450
 Text Notes 1350 2150 0    50   ~ 0
-Need to be RF diodes for protection
+Need to be BAT64-04 
 Wire Wire Line
 	1950 1450 2200 1450
 Connection ~ 1950 1450
@@ -1013,63 +957,50 @@ Text GLabel 8950 5700 3    50   Input ~ 0
 $Comp
 L Transistor_BJT:BC848 Q?
 U 1 1 5F72FAE9
-P 2050 4600
-F 0 "Q?" V 2378 4600 50  0000 C CNN
-F 1 "BC848" V 2287 4600 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 2250 4525 50  0001 L CIN
-F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 2050 4600 50  0001 L CNN
-	1    2050 4600
-	0    -1   -1   0   
+P 2350 4100
+F 0 "Q?" V 2678 4100 50  0000 C CNN
+F 1 "BC848" V 2587 4100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2550 4025 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 2350 4100 50  0001 L CNN
+	1    2350 4100
+	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R_Small_US R?
-U 1 1 5F733C03
-P 2350 4500
-F 0 "R?" V 2145 4500 50  0000 C CNN
-F 1 "1E" V 2236 4500 50  0000 C CNN
-F 2 "" H 2350 4500 50  0001 C CNN
-F 3 "~" H 2350 4500 50  0001 C CNN
-	1    2350 4500
-	0    -1   -1   0   
-$EndComp
-Connection ~ 2450 4500
-Text GLabel 1850 4500 0    50   Input ~ 0
-+12V
+Text GLabel 2450 3900 1    50   Input ~ 0
+Vbat
 $Comp
 L Device:R_Small_US R?
 U 1 1 5F740C78
-P 1950 4800
-F 0 "R?" V 1745 4800 50  0000 C CNN
-F 1 "100k" V 1836 4800 50  0000 C CNN
-F 2 "" H 1950 4800 50  0001 C CNN
-F 3 "~" H 1950 4800 50  0001 C CNN
-	1    1950 4800
-	0    -1   -1   0   
+P 1800 4000
+F 0 "R?" V 1595 4000 50  0000 C CNN
+F 1 "100k" V 1686 4000 50  0000 C CNN
+F 2 "" H 1800 4000 50  0001 C CNN
+F 3 "~" H 1800 4000 50  0001 C CNN
+	1    1800 4000
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R_Small_US R?
 U 1 1 5F740C82
-P 2150 4800
-F 0 "R?" V 1945 4800 50  0000 C CNN
-F 1 "100k" V 2036 4800 50  0000 C CNN
-F 2 "" H 2150 4800 50  0001 C CNN
-F 3 "~" H 2150 4800 50  0001 C CNN
-	1    2150 4800
-	0    -1   -1   0   
+P 1800 4200
+F 0 "R?" V 1595 4200 50  0000 C CNN
+F 1 "100k" V 1686 4200 50  0000 C CNN
+F 2 "" H 1800 4200 50  0001 C CNN
+F 3 "~" H 1800 4200 50  0001 C CNN
+	1    1800 4200
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F740C8C
-P 2250 4800
-F 0 "#PWR?" H 2250 4550 50  0001 C CNN
-F 1 "GND" H 2255 4627 50  0001 C CNN
-F 2 "" H 2250 4800 50  0001 C CNN
-F 3 "" H 2250 4800 50  0001 C CNN
-	1    2250 4800
-	0    -1   -1   0   
+P 1800 4300
+F 0 "#PWR?" H 1800 4050 50  0001 C CNN
+F 1 "GND" H 1805 4127 50  0001 C CNN
+F 2 "" H 1800 4300 50  0001 C CNN
+F 3 "" H 1800 4300 50  0001 C CNN
+	1    1800 4300
+	1    0    0    -1  
 $EndComp
-Connection ~ 2050 4800
-Text GLabel 1850 4800 0    50   Input ~ 0
+Text GLabel 1800 3900 1    50   Input ~ 0
 +Vf
 $Comp
 L Device:CP_Small C?
@@ -1352,38 +1283,38 @@ Text GLabel 7050 5500 0    50   Input ~ 0
 $Comp
 L Amplifier_Operational:OPA1602 U?
 U 1 1 5F62CDCA
-P 8400 1750
-F 0 "U?" H 8400 2117 50  0000 C CNN
-F 1 "OPA1662" H 8400 2026 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8400 1750 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa1662.pdf" H 8400 1750 50  0001 C CNN
-	1    8400 1750
+P 8250 1650
+F 0 "U?" H 8250 2017 50  0000 C CNN
+F 1 "OPA1662" H 8250 1926 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8250 1650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1662.pdf" H 8250 1650 50  0001 C CNN
+	1    8250 1650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:OPA1602 U?
 U 2 1 5F62F9A9
-P 8400 2400
-F 0 "U?" H 8400 2767 50  0000 C CNN
-F 1 "OPA1662" H 8400 2676 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8400 2400 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa1662.pdf" H 8400 2400 50  0001 C CNN
-	2    8400 2400
+P 8250 2600
+F 0 "U?" H 8250 2967 50  0000 C CNN
+F 1 "OPA1662" H 8250 2876 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8250 2600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1662.pdf" H 8250 2600 50  0001 C CNN
+	2    8250 2600
 	1    0    0    -1  
 $EndComp
 $Comp
 L Amplifier_Operational:OPA1602 U?
 U 3 1 5F633584
-P 8300 3850
-F 0 "U?" H 8258 3896 50  0000 L CNN
-F 1 "OPA1662" H 8258 3805 50  0000 L CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8300 3850 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/opa1662.pdf" H 8300 3850 50  0001 C CNN
-	3    8300 3850
+P 9150 2200
+F 0 "U?" H 9108 2246 50  0000 L CNN
+F 1 "OPA1662" H 9108 2155 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 9150 2200 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1662.pdf" H 9150 2200 50  0001 C CNN
+	3    9150 2200
 	1    0    0    -1  
 $EndComp
-Text GLabel 8200 3550 1    50   Input ~ 0
-Vbat
+Text GLabel 9050 1900 1    50   Input ~ 0
++Vf
 $Comp
 L custom_library:74AUP1G74 U?
 U 1 1 5F5FE082
@@ -1479,4 +1410,237 @@ Wire Wire Line
 Connection ~ 7450 5500
 Text Notes 8100 4600 0    50   ~ 0
 LO buffer and divider
+Wire Wire Line
+	3550 2350 3550 2450
+Wire Wire Line
+	3550 2700 3950 2700
+Connection ~ 3550 2450
+Wire Wire Line
+	3550 2450 3550 2700
+Connection ~ 1850 6750
+$Comp
+L Transistor_BJT:BC858 Q?
+U 1 1 5F5E336C
+P 1750 6950
+F 0 "Q?" H 1941 6996 50  0000 L CNN
+F 1 "BC858" H 1941 6905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1950 6875 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC856.pdf" H 1750 6950 50  0001 L CNN
+	1    1750 6950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	2150 4100 2050 4100
+Connection ~ 1800 4100
+$Comp
+L Device:C_Small C?
+U 1 1 5F840894
+P 2050 4200
+F 0 "C?" V 2050 4600 50  0000 C CNN
+F 1 "0.1u" V 2050 4800 50  0000 C CNN
+F 2 "" H 2050 4200 50  0001 C CNN
+F 3 "~" H 2050 4200 50  0001 C CNN
+	1    2050 4200
+	-1   0    0    1   
+$EndComp
+Connection ~ 2050 4100
+Wire Wire Line
+	2050 4100 1800 4100
+$Comp
+L Device:C_Small C?
+U 1 1 5F853099
+P 1550 6850
+F 0 "C?" V 1550 7250 50  0000 C CNN
+F 1 "0.1u" V 1550 7450 50  0000 C CNN
+F 2 "" H 1550 6850 50  0001 C CNN
+F 3 "~" H 1550 6850 50  0001 C CNN
+	1    1550 6850
+	-1   0    0    1   
+$EndComp
+Connection ~ 1550 6950
+Wire Wire Line
+	1550 6750 1850 6750
+Wire Wire Line
+	2050 4300 2450 4300
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F871CB0
+P 2450 4400
+F 0 "R?" V 2245 4400 50  0000 C CNN
+F 1 "1E" V 2336 4400 50  0000 C CNN
+F 2 "" H 2450 4400 50  0001 C CNN
+F 3 "~" H 2450 4400 50  0001 C CNN
+	1    2450 4400
+	-1   0    0    1   
+$EndComp
+Connection ~ 2450 4500
+Connection ~ 2450 4300
+$Comp
+L power:GND #PWR?
+U 1 1 5F87AB8D
+P 9050 2500
+F 0 "#PWR?" H 9050 2250 50  0001 C CNN
+F 1 "GND" H 9055 2327 50  0001 C CNN
+F 2 "" H 9050 2500 50  0001 C CNN
+F 3 "" H 9050 2500 50  0001 C CNN
+	1    9050 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F884316
+P 7850 1750
+F 0 "R?" V 7645 1750 50  0000 C CNN
+F 1 "2.7k" V 7736 1750 50  0000 C CNN
+F 2 "" H 7850 1750 50  0001 C CNN
+F 3 "~" H 7850 1750 50  0001 C CNN
+	1    7850 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8150 1950 7950 1950
+Wire Wire Line
+	7950 1950 7950 1750
+Connection ~ 7950 1750
+Wire Wire Line
+	8350 1950 8550 1950
+Wire Wire Line
+	8550 1950 8550 1650
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F89268A
+P 8650 1650
+F 0 "R?" V 8445 1650 50  0000 C CNN
+F 1 "1E" V 8536 1650 50  0000 C CNN
+F 2 "" H 8650 1650 50  0001 C CNN
+F 3 "~" H 8650 1650 50  0001 C CNN
+	1    8650 1650
+	0    -1   -1   0   
+$EndComp
+Connection ~ 8550 1650
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F893A53
+P 7850 1950
+F 0 "R?" V 7645 1950 50  0000 C CNN
+F 1 "2.7k" V 7736 1950 50  0000 C CNN
+F 2 "" H 7850 1950 50  0001 C CNN
+F 3 "~" H 7850 1950 50  0001 C CNN
+	1    7850 1950
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7950 1950
+Text GLabel 8750 1650 2    50   Output ~ 0
+I
+Wire Wire Line
+	7750 1750 7350 1750
+Connection ~ 7350 1750
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F883258
+P 8250 1950
+F 0 "R?" V 8045 1950 50  0000 C CNN
+F 1 "2.7k" V 8136 1950 50  0000 C CNN
+F 2 "" H 8250 1950 50  0001 C CNN
+F 3 "~" H 8250 1950 50  0001 C CNN
+	1    8250 1950
+	0    -1   -1   0   
+$EndComp
+Text Notes 7350 1650 0    50   ~ 0
+4V DC
+Text Notes 8500 1550 0    50   ~ 0
+1.65V DC
+Text GLabel 7950 1550 0    50   Input ~ 0
+Vbias
+Text GLabel 7550 1950 0    50   Input ~ 0
++Vf
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F8D2293
+P 7650 1950
+F 0 "R?" V 7445 1950 50  0000 C CNN
+F 1 "390E" V 7536 1950 50  0000 C CNN
+F 2 "" H 7650 1950 50  0001 C CNN
+F 3 "~" H 7650 1950 50  0001 C CNN
+	1    7650 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F8DEC36
+P 7850 2700
+F 0 "R?" V 7645 2700 50  0000 C CNN
+F 1 "2.7k" V 7736 2700 50  0000 C CNN
+F 2 "" H 7850 2700 50  0001 C CNN
+F 3 "~" H 7850 2700 50  0001 C CNN
+	1    7850 2700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8150 2900 7950 2900
+Wire Wire Line
+	7950 2900 7950 2700
+Wire Wire Line
+	8350 2900 8550 2900
+Wire Wire Line
+	8550 2900 8550 2600
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F8DEC41
+P 8650 2600
+F 0 "R?" V 8445 2600 50  0000 C CNN
+F 1 "1E" V 8536 2600 50  0000 C CNN
+F 2 "" H 8650 2600 50  0001 C CNN
+F 3 "~" H 8650 2600 50  0001 C CNN
+	1    8650 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F8DEC48
+P 7850 2900
+F 0 "R?" V 7645 2900 50  0000 C CNN
+F 1 "2.7k" V 7736 2900 50  0000 C CNN
+F 2 "" H 7850 2900 50  0001 C CNN
+F 3 "~" H 7850 2900 50  0001 C CNN
+	1    7850 2900
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7950 2900
+Text GLabel 8750 2600 2    50   Output ~ 0
+Q
+Wire Wire Line
+	7750 2700 7350 2700
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F8DEC51
+P 8250 2900
+F 0 "R?" V 8045 2900 50  0000 C CNN
+F 1 "2.7k" V 8136 2900 50  0000 C CNN
+F 2 "" H 8250 2900 50  0001 C CNN
+F 3 "~" H 8250 2900 50  0001 C CNN
+	1    8250 2900
+	0    -1   -1   0   
+$EndComp
+Text Notes 7350 2600 0    50   ~ 0
+4V DC
+Text Notes 8500 2500 0    50   ~ 0
+1.65V DC
+Text GLabel 7950 2500 0    50   Input ~ 0
+Vbias
+Text GLabel 7550 2900 0    50   Input ~ 0
++Vf
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F8DEC5B
+P 7650 2900
+F 0 "R?" V 7445 2900 50  0000 C CNN
+F 1 "390E" V 7536 2900 50  0000 C CNN
+F 2 "" H 7650 2900 50  0001 C CNN
+F 3 "~" H 7650 2900 50  0001 C CNN
+	1    7650 2900
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7950 2700
+Connection ~ 8550 2600
 $EndSCHEMATC
