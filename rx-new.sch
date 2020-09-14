@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:rx-new-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -99,7 +100,7 @@ Wire Wire Line
 Wire Wire Line
 	3950 1450 4050 1450
 Connection ~ 3950 1450
-Text GLabel 3950 950  1    50   Input ~ 0
+Text GLabel 3950 1050 1    50   Input ~ 0
 +Vf
 Wire Wire Line
 	3800 6050 4000 6050
@@ -349,7 +350,7 @@ Text GLabel 800  5300 0    50   Input ~ 0
 +12V
 Text GLabel 3050 5300 2    50   Output ~ 0
 +Vf
-Text Notes 2400 4850 0    50   ~ 0
+Text Notes 3850 4350 0    50   ~ 0
 Power section
 $Comp
 L 74xGxx:74AUP1G74 U?
@@ -383,15 +384,10 @@ Text GLabel 2100 3250 1    50   Output ~ 0
 CLK_0
 Text GLabel 3000 3550 2    50   Output ~ 0
 CLK_1
-Wire Wire Line
-	3950 3050 4050 3050
 Text GLabel 3950 3150 3    50   Input ~ 0
 -Vf
 Wire Wire Line
-	3950 2850 3950 3050
-Connection ~ 3950 3050
-Wire Wire Line
-	3950 3050 3950 3150
+	3950 2850 3950 2900
 $Comp
 L Device:R_Small_US R?
 U 1 1 5F5CBA1F
@@ -427,7 +423,7 @@ F 3 "" H 2250 5700 50  0001 C CNN
 $EndComp
 Connection ~ 2250 5500
 Text Notes 700  6350 0    50   ~ 0
-TPS791 handles higher input voltages\nNeed to add FB pin\n+Vf = 4V + 3.6V/2
++Vf = 4V + 2.5V
 Text GLabel 3800 6350 3    50   Input ~ 0
 -Vf
 $Comp
@@ -508,7 +504,7 @@ L Device:R_Small_US R?
 U 1 1 5F5FBBB8
 P 2150 6750
 F 0 "R?" V 1945 6750 50  0000 C CNN
-F 1 "100E" V 2036 6750 50  0000 C CNN
+F 1 "1E" V 2036 6750 50  0000 C CNN
 F 2 "" H 2150 6750 50  0001 C CNN
 F 3 "~" H 2150 6750 50  0001 C CNN
 	1    2150 6750
@@ -541,7 +537,7 @@ F 3 "" H 1550 7150 50  0001 C CNN
 $EndComp
 Connection ~ 1550 6950
 Text Notes 1200 7400 0    50   ~ 0
--Vf = 4V - 3.6V/2
+-Vf = 4V - 2.5V
 Text Notes 800  7700 0    50   ~ 0
 Still need to define all resistor values to generate +Vf and -Vf
 Text GLabel 4250 1450 2    50   Input ~ 0
@@ -552,16 +548,8 @@ Text GLabel 1550 3550 0    50   Input ~ 0
 4LO
 Text GLabel 2400 3550 0    50   Input ~ 0
 4LO
-Text GLabel 1800 3200 1    50   Input ~ 0
-+Vf
-Text GLabel 2650 3200 1    50   Input ~ 0
-+Vf
-Text GLabel 1800 3700 3    50   Input ~ 0
-+Vf
-Text GLabel 2650 3700 3    50   Input ~ 0
-+Vf
 Text Notes 1350 4050 0    50   ~ 0
-Need to supply this with +Vf and -Vf\nmight also need 74LVX00 as a shaping buffer
+need 74LVX00 as a shaping buffer
 $Comp
 L power:GND #PWR?
 U 1 1 5F66472C
@@ -605,9 +593,6 @@ Wire Wire Line
 	3950 1250 4050 1250
 Text GLabel 4250 1250 2    50   Input ~ 0
 -Vf
-Wire Wire Line
-	3950 950  3950 1050
-Connection ~ 3950 1050
 Wire Wire Line
 	3950 1050 3950 1250
 Connection ~ 3950 1250
@@ -996,4 +981,195 @@ Wire Wire Line
 	3500 2050 3500 1950
 Wire Wire Line
 	3500 1950 3550 1950
+Text GLabel 1650 3300 1    50   Input ~ 0
++Vd
+Text GLabel 1650 3600 3    50   Input ~ 0
+-Vf
+$Comp
+L Device:C_Small C?
+U 1 1 5F6F2D37
+P 4150 3100
+F 0 "C?" V 4150 3500 50  0000 C CNN
+F 1 "1n0" V 4150 3700 50  0000 C CNN
+F 2 "" H 4150 3100 50  0001 C CNN
+F 3 "~" H 4150 3100 50  0001 C CNN
+	1    4150 3100
+	0    1    1    0   
+$EndComp
+Text GLabel 4250 3100 2    50   Input ~ 0
+-Vf
+$Comp
+L Device:C_Small C?
+U 1 1 5F6F2D3E
+P 4150 2900
+F 0 "C?" V 4150 3300 50  0000 C CNN
+F 1 "1n" V 4150 3500 50  0000 C CNN
+F 2 "" H 4150 2900 50  0001 C CNN
+F 3 "~" H 4150 2900 50  0001 C CNN
+	1    4150 2900
+	0    1    1    0   
+$EndComp
+Text GLabel 4250 2900 2    50   Input ~ 0
+-Vf
+Wire Wire Line
+	4050 2900 3950 2900
+Connection ~ 3950 2900
+Wire Wire Line
+	4050 3100 3950 3100
+Connection ~ 3950 3100
+Wire Wire Line
+	3950 3100 3950 3150
+Wire Wire Line
+	3950 2900 3950 3100
+Text GLabel 3050 4500 2    50   Output ~ 0
++Vd
+$Comp
+L Device:C_Small C?
+U 1 1 5F71038B
+P 2450 4700
+F 0 "C?" V 2450 5100 50  0000 C CNN
+F 1 "0.1u" V 2450 5300 50  0000 C CNN
+F 2 "" H 2450 4700 50  0001 C CNN
+F 3 "~" H 2450 4700 50  0001 C CNN
+	1    2450 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP_Small C?
+U 1 1 5F710395
+P 2850 4700
+F 0 "C?" V 2850 4250 50  0000 L CNN
+F 1 "47u" V 2850 4050 50  0000 L CNN
+F 2 "" H 2850 4700 50  0001 C CNN
+F 3 "~" H 2850 4700 50  0001 C CNN
+	1    2850 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 4600 2850 4500
+$Comp
+L Device:C_Small C?
+U 1 1 5F7103A0
+P 2650 4700
+F 0 "C?" V 2650 5100 50  0000 C CNN
+F 1 "1n" V 2650 5300 50  0000 C CNN
+F 2 "" H 2650 4700 50  0001 C CNN
+F 3 "~" H 2650 4700 50  0001 C CNN
+	1    2650 4700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2850 4500 3050 4500
+Connection ~ 2850 4500
+$Comp
+L power:GND #PWR?
+U 1 1 5F7103AC
+P 2450 4800
+F 0 "#PWR?" H 2450 4550 50  0001 C CNN
+F 1 "GND" H 2455 4627 50  0001 C CNN
+F 2 "" H 2450 4800 50  0001 C CNN
+F 3 "" H 2450 4800 50  0001 C CNN
+	1    2450 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F7103B6
+P 2650 4800
+F 0 "#PWR?" H 2650 4550 50  0001 C CNN
+F 1 "GND" H 2655 4627 50  0001 C CNN
+F 2 "" H 2650 4800 50  0001 C CNN
+F 3 "" H 2650 4800 50  0001 C CNN
+	1    2650 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F7103C0
+P 2850 4800
+F 0 "#PWR?" H 2850 4550 50  0001 C CNN
+F 1 "GND" H 2855 4627 50  0001 C CNN
+F 2 "" H 2850 4800 50  0001 C CNN
+F 3 "" H 2850 4800 50  0001 C CNN
+	1    2850 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 4500 2450 4600
+Wire Wire Line
+	2450 4500 2650 4500
+Wire Wire Line
+	2650 4500 2650 4600
+Connection ~ 2650 4500
+Wire Wire Line
+	2650 4500 2850 4500
+Text GLabel 1800 3200 1    50   Input ~ 0
++Vd
+Text GLabel 2650 3200 1    50   Input ~ 0
++Vd
+Text GLabel 1800 3700 3    50   Input ~ 0
++Vd
+Text GLabel 2650 3700 3    50   Input ~ 0
++Vd
+$Comp
+L Transistor_BJT:BC848 Q?
+U 1 1 5F72FAE9
+P 2050 4600
+F 0 "Q?" V 2378 4600 50  0000 C CNN
+F 1 "BC848" V 2287 4600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2250 4525 50  0001 L CIN
+F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657" H 2050 4600 50  0001 L CNN
+	1    2050 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F733C03
+P 2350 4500
+F 0 "R?" V 2145 4500 50  0000 C CNN
+F 1 "1E" V 2236 4500 50  0000 C CNN
+F 2 "" H 2350 4500 50  0001 C CNN
+F 3 "~" H 2350 4500 50  0001 C CNN
+	1    2350 4500
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2450 4500
+Text GLabel 1850 4500 0    50   Input ~ 0
++12V
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F740C78
+P 1950 4800
+F 0 "R?" V 1745 4800 50  0000 C CNN
+F 1 "100k" V 1836 4800 50  0000 C CNN
+F 2 "" H 1950 4800 50  0001 C CNN
+F 3 "~" H 1950 4800 50  0001 C CNN
+	1    1950 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5F740C82
+P 2150 4800
+F 0 "R?" V 1945 4800 50  0000 C CNN
+F 1 "100k" V 2036 4800 50  0000 C CNN
+F 2 "" H 2150 4800 50  0001 C CNN
+F 3 "~" H 2150 4800 50  0001 C CNN
+	1    2150 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F740C8C
+P 2250 4800
+F 0 "#PWR?" H 2250 4550 50  0001 C CNN
+F 1 "GND" H 2255 4627 50  0001 C CNN
+F 2 "" H 2250 4800 50  0001 C CNN
+F 3 "" H 2250 4800 50  0001 C CNN
+	1    2250 4800
+	0    -1   -1   0   
+$EndComp
+Connection ~ 2050 4800
+Text GLabel 1850 4800 0    50   Input ~ 0
++Vf
 $EndSCHEMATC
