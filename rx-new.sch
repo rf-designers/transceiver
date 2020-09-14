@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:rx-new-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -20,7 +19,7 @@ U 1 1 5F58D21D
 P 3950 2050
 F 0 "U?" H 4100 2700 50  0000 C CNN
 F 1 "SN74CBT3253" H 4300 2600 50  0000 C CNN
-F 2 "" H 3950 2050 50  0001 C CNN
+F 2 "Package_SO:SOP-16_4.4x10.4mm_P1.27mm" H 3950 2050 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74cbt3253" H 3950 2050 50  0001 C CNN
 	1    3950 2050
 	1    0    0    -1  
@@ -109,7 +108,7 @@ U 1 1 5F5AEA8D
 P 7050 1750
 F 0 "U?" H 7394 1796 50  0000 L CNN
 F 1 "AD797" H 7394 1705 50  0000 L CNN
-F 2 "" H 7100 1800 50  0001 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7100 1800 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD797.pdf" H 7100 1900 50  0001 C CNN
 	1    7050 1750
 	1    0    0    -1  
@@ -241,17 +240,6 @@ F 3 "" H 5300 2750 50  0001 C CNN
 	1    5300 2750
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5F5B8768
-P 5300 3150
-F 0 "#PWR?" H 5300 2900 50  0001 C CNN
-F 1 "GND" H 5305 2977 50  0001 C CNN
-F 2 "" H 5300 3150 50  0001 C CNN
-F 3 "" H 5300 3150 50  0001 C CNN
-	1    5300 3150
-	1    0    0    -1  
-$EndComp
 Connection ~ 5300 1650
 Connection ~ 5300 2150
 Connection ~ 5300 2550
@@ -314,38 +302,10 @@ Text GLabel 3950 5500 2    50   Output ~ 0
 +Vf
 Text Notes 3850 4350 0    50   ~ 0
 Power section
-$Comp
-L 74xGxx:74AUP1G74 U?
-U 1 1 5F5D87CB
-P 2500 3250
-F 0 "U?" H 2300 3600 50  0000 C CNN
-F 1 "74AUP1G74" H 2200 3500 50  0000 C CNN
-F 2 "" H 2500 3250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 2500 3250 50  0001 C CNN
-	1    2500 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74xGxx:74AUP1G74 U?
-U 1 1 5F5D93F4
-P 3350 3250
-F 0 "U?" H 3150 3600 50  0000 C CNN
-F 1 "74AUP1G74" H 3100 3500 50  0000 C CNN
-F 2 "" H 3350 3250 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 3350 3250 50  0001 C CNN
-	1    3350 3250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	3600 3350 3700 3350
-Wire Wire Line
-	2750 3150 2800 3150
-Wire Wire Line
-	2800 3150 2800 3050
-Text GLabel 2800 3050 1    50   Output ~ 0
+	9250 5350 9250 5250
+Text GLabel 9250 5250 1    50   Output ~ 0
 CLK_0
-Text GLabel 3700 3350 2    50   Output ~ 0
-CLK_1
 Text GLabel 3950 2950 3    50   Input ~ 0
 -Vf
 Wire Wire Line
@@ -552,17 +512,11 @@ Text GLabel 4250 1100 2    50   Input ~ 0
 Wire Wire Line
 	3950 850  3950 900 
 Wire Wire Line
-	2250 3150 2250 2750
+	8600 5350 8600 4950
 Wire Wire Line
-	2250 2750 3600 2750
+	9300 5550 9300 5350
 Wire Wire Line
-	3600 2750 3600 3150
-Wire Wire Line
-	2750 3350 2850 3350
-Wire Wire Line
-	2850 3350 2850 3150
-Wire Wire Line
-	2850 3150 3100 3150
+	9300 5350 9450 5350
 $Comp
 L Device:C_Small C?
 U 1 1 5F6A6233
@@ -934,9 +888,9 @@ Wire Wire Line
 	3500 1850 3500 1750
 Wire Wire Line
 	3500 1750 3550 1750
-Text GLabel 2350 3100 1    50   Input ~ 0
+Text GLabel 8850 5200 1    50   Input ~ 0
 +Vd
-Text GLabel 2350 3400 3    50   Input ~ 0
+Text GLabel 8850 5700 3    50   Input ~ 0
 -Vf
 $Comp
 L Device:C_Small C?
@@ -1052,13 +1006,9 @@ Wire Wire Line
 Connection ~ 2650 4500
 Wire Wire Line
 	2650 4500 2850 4500
-Text GLabel 2500 3000 1    50   Input ~ 0
+Text GLabel 8950 5200 1    50   Input ~ 0
 +Vd
-Text GLabel 3350 3000 1    50   Input ~ 0
-+Vd
-Text GLabel 2500 3500 3    50   Input ~ 0
-+Vd
-Text GLabel 3350 3500 3    50   Input ~ 0
+Text GLabel 8950 5700 3    50   Input ~ 0
 +Vd
 $Comp
 L Transistor_BJT:BC848 Q?
@@ -1292,7 +1242,7 @@ U 1 1 5F795FCC
 P 7050 2700
 F 0 "U?" H 7394 2746 50  0000 L CNN
 F 1 "AD797" H 7394 2655 50  0000 L CNN
-F 2 "" H 7100 2750 50  0001 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 7100 2750 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/AD797.pdf" H 7100 2850 50  0001 C CNN
 	1    7050 2700
 	1    0    0    -1  
@@ -1373,64 +1323,160 @@ F 3 "" H 4250 2700 50  0001 C CNN
 	1    4250 2700
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1850 3450 3    50   Input ~ 0
--Vf
-$Comp
-L 74xGxx:74LVC1G00 U?
-U 1 1 5F7DBBF0
-P 1850 3350
-F 0 "U?" H 1600 3650 50  0000 C CNN
-F 1 "Fast NAND (NC7sz00)" H 1400 3550 50  0000 C CNN
-F 2 "" H 1850 3350 50  0001 C CNN
-F 3 "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf" H 1850 3350 50  0001 C CNN
-	1    1850 3350
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R_Small_US R?
 U 1 1 5F7EB26C
-P 1800 3700
-F 0 "R?" V 1595 3700 50  0000 C CNN
-F 1 "22k" V 1686 3700 50  0000 C CNN
-F 2 "" H 1800 3700 50  0001 C CNN
-F 3 "~" H 1800 3700 50  0001 C CNN
-	1    1800 3700
+P 8000 6050
+F 0 "R?" V 7795 6050 50  0000 C CNN
+F 1 "22k" V 7886 6050 50  0000 C CNN
+F 2 "" H 8000 6050 50  0001 C CNN
+F 3 "~" H 8000 6050 50  0001 C CNN
+	1    8000 6050
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1900 3700 2100 3700
-Wire Wire Line
-	2100 3700 2100 3350
-Wire Wire Line
-	1700 3700 1450 3700
-Wire Wire Line
-	1450 3700 1450 3300
-Wire Wire Line
-	1450 3300 1550 3300
+	7900 6050 7450 6050
 $Comp
 L Device:C_Small C?
 U 1 1 5F7F5D47
-P 1350 3300
-F 0 "C?" V 1500 3300 50  0000 C CNN
-F 1 "1n0" V 1600 3300 50  0000 C CNN
-F 2 "" H 1350 3300 50  0001 C CNN
-F 3 "~" H 1350 3300 50  0001 C CNN
-	1    1350 3300
+P 7250 5500
+F 0 "C?" V 7400 5500 50  0000 C CNN
+F 1 "1n0" V 7500 5500 50  0000 C CNN
+F 2 "" H 7250 5500 50  0001 C CNN
+F 3 "~" H 7250 5500 50  0001 C CNN
+	1    7250 5500
 	0    1    1    0   
 $EndComp
-Connection ~ 1450 3300
-Text GLabel 1250 3300 0    50   Input ~ 0
+Text GLabel 7050 5500 0    50   Input ~ 0
 4LO_IN
+$Comp
+L Amplifier_Operational:OPA1602 U?
+U 1 1 5F62CDCA
+P 8400 1750
+F 0 "U?" H 8400 2117 50  0000 C CNN
+F 1 "OPA1662" H 8400 2026 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8400 1750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1662.pdf" H 8400 1750 50  0001 C CNN
+	1    8400 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:OPA1602 U?
+U 2 1 5F62F9A9
+P 8400 2400
+F 0 "U?" H 8400 2767 50  0000 C CNN
+F 1 "OPA1662" H 8400 2676 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8400 2400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1662.pdf" H 8400 2400 50  0001 C CNN
+	2    8400 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:OPA1602 U?
+U 3 1 5F633584
+P 8300 3850
+F 0 "U?" H 8258 3896 50  0000 L CNN
+F 1 "OPA1662" H 8258 3805 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8300 3850 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/opa1662.pdf" H 8300 3850 50  0001 C CNN
+	3    8300 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 8200 3550 1    50   Input ~ 0
+Vbat
+$Comp
+L custom_library:74AUP1G74 U?
+U 1 1 5F5FE082
+P 8950 5450
+F 0 "U?" H 8650 6100 50  0000 L CNN
+F 1 "74AUP1G74" H 8650 6000 50  0000 L CNN
+F 2 "Package_SO:VSSOP-8_2.4x2.1mm_P0.5mm" H 8950 5450 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AUP1G74.pdf" H 8950 5450 50  0001 C CNN
+	1    8950 5450
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2100 3350 2250 3350
-Connection ~ 2100 3350
+	8600 5550 8500 5550
 Wire Wire Line
-	2100 3700 3100 3700
+	9200 5350 9250 5350
 Wire Wire Line
-	3100 3700 3100 3350
-Connection ~ 2100 3700
-Text GLabel 1550 3400 3    50   Input ~ 0
+	9200 5550 9300 5550
+Wire Wire Line
+	8100 6050 8500 6050
+Wire Wire Line
+	8500 5550 8500 6050
+Connection ~ 8500 5550
+Wire Wire Line
+	8500 5550 8300 5550
+Connection ~ 8500 6050
+Wire Wire Line
+	8500 6050 9450 6050
+Wire Wire Line
+	9450 5550 9450 6050
+Wire Wire Line
+	7450 5500 7450 6050
+Text GLabel 10150 5550 2    50   Output ~ 0
+CLK_1
+Wire Wire Line
+	10050 5550 10150 5550
+Text GLabel 9800 5200 1    50   Input ~ 0
 +Vd
-Text GLabel 1850 3250 1    50   Input ~ 0
+Text GLabel 9700 5200 1    50   Input ~ 0
 +Vd
+Text GLabel 9700 5700 3    50   Input ~ 0
+-Vf
+Text GLabel 9800 5700 3    50   Input ~ 0
++Vd
+$Comp
+L custom_library:74AUP1G74 U?
+U 1 1 5F655934
+P 9800 5450
+F 0 "U?" H 9500 6100 50  0000 L CNN
+F 1 "74AUP1G74" H 9500 6000 50  0000 L CNN
+F 2 "Package_SO:VSSOP-8_2.4x2.1mm_P0.5mm" H 9800 5450 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74AUP1G74.pdf" H 9800 5450 50  0001 C CNN
+	1    9800 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F5B8768
+P 5300 3150
+F 0 "#PWR?" H 5300 2900 50  0001 C CNN
+F 1 "GND" H 5305 2977 50  0001 C CNN
+F 2 "" H 5300 3150 50  0001 C CNN
+F 3 "" H 5300 3150 50  0001 C CNN
+	1    5300 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 4950 10050 5350
+Wire Wire Line
+	8600 4950 10050 4950
+$Comp
+L custom_library:NC7SZ00M5X U?
+U 1 1 5F69D911
+P 8050 5550
+F 0 "U?" H 8150 5750 50  0000 L CNN
+F 1 "NC7SZ00M5X" H 8150 5650 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 8050 5550 50  0001 C CNN
+F 3 "https://ro.mouser.com/datasheet/2/308/NC7SZ00-D-1812355.pdf" H 8050 5550 50  0001 C CNN
+	1    8050 5550
+	1    0    0    -1  
+$EndComp
+Text GLabel 8000 5300 1    50   Input ~ 0
++Vd
+Text GLabel 8000 5800 3    50   Input ~ 0
+-Vf
+Text GLabel 7750 5600 0    50   Input ~ 0
++Vd
+Wire Wire Line
+	7450 5500 7750 5500
+Wire Wire Line
+	7050 5500 7150 5500
+Wire Wire Line
+	7350 5500 7450 5500
+Connection ~ 7450 5500
+Text Notes 8100 4600 0    50   ~ 0
+LO buffer and divider
 $EndSCHEMATC
