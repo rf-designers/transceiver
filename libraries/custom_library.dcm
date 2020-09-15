@@ -6,6 +6,12 @@ K Single D Flip-Flop D CMOS
 F https://assets.nexperia.com/documents/data-sheet/74AUP1G74.pdf
 $ENDCMP
 #
+$CMP BAT64-04
+D schottky barrier diode
+K schottky diode
+F http://www.diodes.com/_files/datasheets/ds11005.pdf
+$ENDCMP
+#
 $CMP NC7SZ00M5X
 D Single NAND Gate, Low-Voltage CMOS
 K Single Gate NAND LVC CMOS
@@ -15,12 +21,6 @@ $ENDCMP
 $CMP TPS79101DBVREP
 D TPS79101DBVREP
 F http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TPS79101-EP&fileType=pdf
-$ENDCMP
-#
-$CMP BAT64-04
-D schottky barrier diode
-K schottky diode
-F http://www.diodes.com/_files/datasheets/ds11005.pdf
 $ENDCMP
 #
 #End Doc Library

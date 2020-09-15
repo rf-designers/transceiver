@@ -263,8 +263,6 @@ F 3 "" H 3000 6100 50  0001 C CNN
 	1    3000 6100
 	1    0    0    -1  
 $EndComp
-Text GLabel 1350 5500 0    50   Input ~ 0
-Vbat
 Text Notes 3850 4350 0    50   ~ 0
 Power section
 Wire Wire Line
@@ -647,10 +645,8 @@ Wire Wire Line
 	2600 1850 3500 1850
 Wire Wire Line
 	2600 1450 3500 1450
-Text GLabel 1250 1450 0    50   Input ~ 0
-RF_IN
 Wire Wire Line
-	1350 1450 1250 1450
+	1350 1450 1200 1450
 $Comp
 L power:GND #PWR013
 U 1 1 5F5A3FE3
@@ -813,8 +809,6 @@ F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_B
 	1    1700 3900
 	1    0    0    -1  
 $EndComp
-Text GLabel 1800 3700 1    50   Input ~ 0
-Vbat
 $Comp
 L Device:R_Small_US R1
 U 1 1 5F740C78
@@ -1036,8 +1030,6 @@ F 3 "~" H 7250 5500 50  0001 C CNN
 	1    7250 5500
 	0    1    1    0   
 $EndComp
-Text GLabel 7050 5500 0    50   Input ~ 0
-4LO_IN
 $Comp
 L Amplifier_Operational:OPA1602 U6
 U 1 1 5F62CDCA
@@ -1242,8 +1234,6 @@ F 3 "~" H 7900 1950 50  0001 C CNN
 	1    7900 1950
 	0    -1   -1   0   
 $EndComp
-Text GLabel 9050 1650 2    50   Output ~ 0
-I
 $Comp
 L Device:R_Small_US R21
 U 1 1 5F883258
@@ -1303,8 +1293,6 @@ F 3 "~" H 7900 3650 50  0001 C CNN
 	1    7900 3650
 	0    -1   -1   0   
 $EndComp
-Text GLabel 9050 3350 2    50   Output ~ 0
-Q
 $Comp
 L Device:R_Small_US R22
 U 1 1 5F8DEC51
@@ -2109,4 +2097,187 @@ Wire Wire Line
 Connection ~ 1800 1450
 Wire Wire Line
 	1800 1450 2200 1450
+$Comp
+L Connector:Conn_Coaxial J1
+U 1 1 5F6616CA
+P 1000 1450
+F 0 "J1" H 928 1688 50  0000 C CNN
+F 1 "RF_IN" H 928 1597 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_901-144_Vertical" H 1000 1450 50  0001 C CNN
+F 3 " ~" H 1000 1450 50  0001 C CNN
+	1    1000 1450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR041
+U 1 1 5F6844A3
+P 1000 1650
+F 0 "#PWR041" H 1000 1400 50  0001 C CNN
+F 1 "GND" H 1005 1477 50  0001 C CNN
+F 2 "" H 1000 1650 50  0001 C CNN
+F 3 "" H 1000 1650 50  0001 C CNN
+	1    1000 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3700 1800 3550
+Text Label 1800 3550 0    50   ~ 0
+Vbat
+Text Label 1350 5500 2    50   ~ 0
+Vbat
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5F6A93DD
+P 4700 5500
+F 0 "J2" H 4850 5750 50  0000 C CNN
+F 1 "PWR_IN" H 4850 5650 50  0000 C CNN
+F 2 "" H 4700 5500 50  0001 C CNN
+F 3 "~" H 4700 5500 50  0001 C CNN
+	1    4700 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 5500 5000 5500
+$Comp
+L power:GND #PWR043
+U 1 1 5F6BAE9C
+P 4900 5600
+F 0 "#PWR043" H 4900 5350 50  0001 C CNN
+F 1 "GND" H 4905 5427 50  0001 C CNN
+F 2 "" H 4900 5600 50  0001 C CNN
+F 3 "" H 4900 5600 50  0001 C CNN
+	1    4900 5600
+	0    -1   -1   0   
+$EndComp
+Text Label 5000 5500 0    50   ~ 0
+Vbat
+$Comp
+L Connector:AudioJack2_Ground J3
+U 1 1 5F6BD3CF
+P 4800 6100
+F 0 "J3" H 4832 6425 50  0000 C CNN
+F 1 "IQ_OUT" H 4832 6334 50  0000 C CNN
+F 2 "" H 4800 6100 50  0001 C CNN
+F 3 "~" H 4800 6100 50  0001 C CNN
+	1    4800 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 6000 5050 6000
+Wire Wire Line
+	5000 6100 5050 6100
+$Comp
+L power:GND #PWR042
+U 1 1 5F6E0D11
+P 4800 6300
+F 0 "#PWR042" H 4800 6050 50  0001 C CNN
+F 1 "GND" H 4805 6127 50  0001 C CNN
+F 2 "" H 4800 6300 50  0001 C CNN
+F 3 "" H 4800 6300 50  0001 C CNN
+	1    4800 6300
+	1    0    0    -1  
+$EndComp
+Text Label 5050 6000 0    50   ~ 0
+AUDIO_I
+Text Label 5050 6100 0    50   ~ 0
+AUDIO_Q
+$Comp
+L Connector:Conn_Coaxial J4
+U 1 1 5F6F3F62
+P 6850 5500
+F 0 "J4" H 6778 5738 50  0000 C CNN
+F 1 "4LO_IN" H 6778 5647 50  0000 C CNN
+F 2 "Connector_Coaxial:SMA_Amphenol_901-144_Vertical" H 6850 5500 50  0001 C CNN
+F 3 " ~" H 6850 5500 50  0001 C CNN
+	1    6850 5500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR044
+U 1 1 5F7056D4
+P 6850 5700
+F 0 "#PWR044" H 6850 5450 50  0001 C CNN
+F 1 "GND" H 6855 5527 50  0001 C CNN
+F 2 "" H 6850 5700 50  0001 C CNN
+F 3 "" H 6850 5700 50  0001 C CNN
+	1    6850 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 1650 9150 1650
+Wire Wire Line
+	9050 3350 9150 3350
+Text Label 9150 1650 0    50   ~ 0
+AUDIO_I
+Text Label 9150 3350 0    50   ~ 0
+AUDIO_Q
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5F72BF33
+P 5200 6950
+F 0 "#FLG0101" H 5200 7025 50  0001 C CNN
+F 1 "PWR_FLAG" H 5200 7123 50  0001 C CNN
+F 2 "" H 5200 6950 50  0001 C CNN
+F 3 "~" H 5200 6950 50  0001 C CNN
+	1    5200 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5F72D5F9
+P 5200 6950
+F 0 "#PWR0101" H 5200 6700 50  0001 C CNN
+F 1 "GND" H 5205 6777 50  0001 C CNN
+F 2 "" H 5200 6950 50  0001 C CNN
+F 3 "" H 5200 6950 50  0001 C CNN
+	1    5200 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5F72DB65
+P 5350 6950
+F 0 "#FLG0102" H 5350 7025 50  0001 C CNN
+F 1 "PWR_FLAG" H 5350 7123 50  0001 C CNN
+F 2 "" H 5350 6950 50  0001 C CNN
+F 3 "~" H 5350 6950 50  0001 C CNN
+	1    5350 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 6950 5350 7050
+Text Label 5350 7050 0    50   ~ 0
+Vbat
+Text Notes 5200 6800 0    50   ~ 0
+Keep DRC happy
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5F763F49
+P 5600 6950
+F 0 "#FLG0103" H 5600 7025 50  0001 C CNN
+F 1 "PWR_FLAG" H 5600 7123 50  0001 C CNN
+F 2 "" H 5600 6950 50  0001 C CNN
+F 3 "~" H 5600 6950 50  0001 C CNN
+	1    5600 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 6950 5600 7050
+Text Label 5600 7050 0    50   ~ 0
+-Vf
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5F776F7E
+P 5800 6950
+F 0 "#FLG0104" H 5800 7025 50  0001 C CNN
+F 1 "PWR_FLAG" H 5800 7123 50  0001 C CNN
+F 2 "" H 5800 6950 50  0001 C CNN
+F 3 "~" H 5800 6950 50  0001 C CNN
+	1    5800 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 6950 5800 7050
+Text Label 5800 7050 0    50   ~ 0
++Vd
 $EndSCHEMATC
