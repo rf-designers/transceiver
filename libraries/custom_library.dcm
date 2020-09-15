@@ -17,4 +17,10 @@ D TPS79101DBVREP
 F http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TPS79101-EP&fileType=pdf
 $ENDCMP
 #
+$CMP BAT64-04
+D schottky barrier diode
+K schottky diode
+F http://www.diodes.com/_files/datasheets/ds11005.pdf
+$ENDCMP
+#
 #End Doc Library

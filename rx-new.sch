@@ -647,64 +647,10 @@ Wire Wire Line
 	2600 1850 3500 1850
 Wire Wire Line
 	2600 1450 3500 1450
-Text Notes 1350 2150 0    50   ~ 0
-Need to be BAT64-04 
-Wire Wire Line
-	1950 1450 2200 1450
-Connection ~ 1950 1450
-Connection ~ 1700 1450
-Wire Wire Line
-	1700 1450 1950 1450
-$Comp
-L power:GND #PWR09
-U 1 1 5F674BBB
-P 1950 1750
-F 0 "#PWR09" H 1950 1500 50  0001 C CNN
-F 1 "GND" H 1955 1577 50  0001 C CNN
-F 2 "" H 1950 1750 50  0001 C CNN
-F 3 "" H 1950 1750 50  0001 C CNN
-	1    1950 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR05
-U 1 1 5F672E8C
-P 1700 1750
-F 0 "#PWR05" H 1700 1500 50  0001 C CNN
-F 1 "GND" H 1705 1577 50  0001 C CNN
-F 2 "" H 1700 1750 50  0001 C CNN
-F 3 "" H 1700 1750 50  0001 C CNN
-	1    1700 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L Diode:BAT42 D2
-U 1 1 5F66A798
-P 1950 1600
-F 0 "D2" V 1996 1521 50  0000 R CNN
-F 1 "BAT42" V 1905 1521 50  0000 R CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1950 1425 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85660/bat42.pdf" H 1950 1600 50  0001 C CNN
-	1    1950 1600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Diode:BAT42 D1
-U 1 1 5F6685CF
-P 1700 1600
-F 0 "D1" V 1654 1679 50  0000 L CNN
-F 1 "BAT42" V 1745 1679 50  0000 L CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 1700 1425 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/85660/bat42.pdf" H 1700 1600 50  0001 C CNN
-	1    1700 1600
-	0    -1   1    0   
-$EndComp
 Text GLabel 1250 1450 0    50   Input ~ 0
 RF_IN
 Wire Wire Line
 	1350 1450 1250 1450
-Wire Wire Line
-	1550 1450 1700 1450
 $Comp
 L power:GND #PWR013
 U 1 1 5F5A3FE3
@@ -2123,4 +2069,44 @@ Text Label 3750 7050 3    50   ~ 0
 -Vf
 Text Label 4000 7050 3    50   ~ 0
 -Vf
+Wire Wire Line
+	1550 1450 1800 1450
+$Comp
+L custom_library:BAT64-04 D1
+U 1 1 5F61AD7E
+P 1800 1600
+F 0 "D1" H 1350 1500 50  0000 L CNN
+F 1 "BAT64-04" H 1200 1400 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1875 1725 50  0001 L CNN
+F 3 "http://www.diodes.com/_files/datasheets/ds11005.pdf" V 1950 1480 50  0001 C CNN
+	1    1800 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5F672E8C
+P 1650 1900
+F 0 "#PWR05" H 1650 1650 50  0001 C CNN
+F 1 "GND" H 1655 1727 50  0001 C CNN
+F 2 "" H 1650 1900 50  0001 C CNN
+F 3 "" H 1650 1900 50  0001 C CNN
+	1    1650 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5F674BBB
+P 1950 1900
+F 0 "#PWR09" H 1950 1650 50  0001 C CNN
+F 1 "GND" H 1955 1727 50  0001 C CNN
+F 2 "" H 1950 1900 50  0001 C CNN
+F 3 "" H 1950 1900 50  0001 C CNN
+	1    1950 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 1500 1800 1450
+Connection ~ 1800 1450
+Wire Wire Line
+	1800 1450 2200 1450
 $EndSCHEMATC
