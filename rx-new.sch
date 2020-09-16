@@ -1,5 +1,6 @@
 EESchema Schematic File Version 4
-EELAYER 30 0
+LIBS:rx-new-cache
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -2415,30 +2416,8 @@ F 3 "~" H 5300 5500 50  0001 C CNN
 	1    5300 5500
 	0    -1   -1   0   
 $EndComp
-$Comp
-L Device:CP_Small C48
-U 1 1 5F7D5276
-P 5500 5700
-F 0 "C48" V 5500 5350 50  0000 L CNN
-F 1 "47u" V 5500 5150 50  0000 L CNN
-F 2 "" H 5500 5700 50  0001 C CNN
-F 3 "~" H 5500 5700 50  0001 C CNN
-	1    5500 5700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5500 5600 5500 5500
-$Comp
-L power:GND #PWR0111
-U 1 1 5F7D527D
-P 5500 5800
-F 0 "#PWR0111" H 5500 5550 50  0001 C CNN
-F 1 "GND" H 5505 5627 50  0001 C CNN
-F 2 "" H 5500 5800 50  0001 C CNN
-F 3 "" H 5500 5800 50  0001 C CNN
-	1    5500 5800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5450 5500 5500 5500
 Wire Wire Line
@@ -2499,4 +2478,26 @@ Wire Wire Line
 	2850 3650 2850 3600
 Wire Wire Line
 	3250 4100 3250 4150
+$Comp
+L Device:C_Small C48
+U 1 1 5FA5A39D
+P 5500 5700
+F 0 "C48" V 5500 6000 50  0000 C CNN
+F 1 "0.1u" V 5500 6200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5500 5700 50  0001 C CNN
+F 3 "~" H 5500 5700 50  0001 C CNN
+	1    5500 5700
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA5A3A3
+P 5500 5800
+F 0 "#PWR?" H 5500 5550 50  0001 C CNN
+F 1 "GND" H 5505 5627 50  0001 C CNN
+F 2 "" H 5500 5800 50  0001 C CNN
+F 3 "" H 5500 5800 50  0001 C CNN
+	1    5500 5800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
