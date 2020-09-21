@@ -18,6 +18,12 @@ K Single Gate NAND LVC CMOS
 F https://ro.mouser.com/datasheet/2/308/NC7SZ00-D-1812355.pdf
 $ENDCMP
 #
+$CMP SJ1-3533NG
+D Audio Jack, 2 Poles (Mono / TS), Grounded Sleeve
+K audio jack receptacle mono phone headphone TS connector
+F https://ro.mouser.com/datasheet/2/670/sj1_353xng-1778850.pdf
+$ENDCMP
+#
 $CMP TPS79101DBVREP
 D TPS79101DBVREP
 F http://www.ti.com/general/docs/lit/getliterature.tsp?genericPartNumber=TPS79101-EP&fileType=pdf
