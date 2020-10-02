@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:rx-new-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -2029,9 +2028,9 @@ F 3 "" H 9000 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 9250 2400 0    50   ~ 0
-AUDIO_I
-Text Label 9250 2500 0    50   ~ 0
 AUDIO_Q
+Text Label 9250 2500 0    50   ~ 0
+AUDIO_I
 $Comp
 L Connector:Conn_Coaxial J4
 U 1 1 5F6F3F62
@@ -2504,10 +2503,10 @@ F 4 "SJ1-3533NG" H 9000 2500 50  0001 C CNN "MPN"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0112
 U 1 1 5F9C6168
 P 3000 6950
-F 0 "#PWR?" H 3000 6700 50  0001 C CNN
+F 0 "#PWR0112" H 3000 6700 50  0001 C CNN
 F 1 "GND" H 3005 6777 50  0001 C CNN
 F 2 "" H 3000 6950 50  0001 C CNN
 F 3 "" H 3000 6950 50  0001 C CNN
