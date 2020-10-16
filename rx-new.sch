@@ -2517,4 +2517,94 @@ Wire Wire Line
 	3000 6750 3000 6650
 Wire Wire Line
 	2600 6650 3000 6650
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5F7AA574
+P 6350 6850
+F 0 "H1" H 6450 6853 50  0000 L CNN
+F 1 "MountingHole_Pad" H 6450 6808 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 6350 6850 50  0001 C CNN
+F 3 "~" H 6350 6850 50  0001 C CNN
+	1    6350 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5F7AC58A
+P 6350 6950
+F 0 "#PWR011" H 6350 6700 50  0001 C CNN
+F 1 "GND" H 6355 6777 50  0001 C CNN
+F 2 "" H 6350 6950 50  0001 C CNN
+F 3 "" H 6350 6950 50  0001 C CNN
+	1    6350 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5F7ACD2E
+P 6350 7200
+F 0 "H2" H 6450 7203 50  0000 L CNN
+F 1 "MountingHole_Pad" H 6450 7158 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 6350 7200 50  0001 C CNN
+F 3 "~" H 6350 7200 50  0001 C CNN
+	1    6350 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR034
+U 1 1 5F7ACD34
+P 6350 7300
+F 0 "#PWR034" H 6350 7050 50  0001 C CNN
+F 1 "GND" H 6355 7127 50  0001 C CNN
+F 2 "" H 6350 7300 50  0001 C CNN
+F 3 "" H 6350 7300 50  0001 C CNN
+	1    6350 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR038
+U 1 1 5F7C090E
+P 6650 6950
+F 0 "#PWR038" H 6650 6700 50  0001 C CNN
+F 1 "GND" H 6655 6777 50  0001 C CNN
+F 2 "" H 6650 6950 50  0001 C CNN
+F 3 "" H 6650 6950 50  0001 C CNN
+	1    6650 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5F7D421A
+P 6650 7200
+F 0 "H4" H 6750 7203 50  0000 L CNN
+F 1 "MountingHole_Pad" H 6750 7158 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 6650 7200 50  0001 C CNN
+F 3 "~" H 6650 7200 50  0001 C CNN
+	1    6650 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR045
+U 1 1 5F7D4220
+P 6650 7300
+F 0 "#PWR045" H 6650 7050 50  0001 C CNN
+F 1 "GND" H 6655 7127 50  0001 C CNN
+F 2 "" H 6650 7300 50  0001 C CNN
+F 3 "" H 6650 7300 50  0001 C CNN
+	1    6650 7300
+	1    0    0    -1  
+$EndComp
+Text Notes 6250 6650 0    50   ~ 0
+Mounting holes
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5F7C0908
+P 6650 6850
+F 0 "H3" H 6750 6853 50  0000 L CNN
+F 1 "MountingHole_Pad" H 6750 6808 50  0001 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad" H 6650 6850 50  0001 C CNN
+F 3 "~" H 6650 6850 50  0001 C CNN
+	1    6650 6850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

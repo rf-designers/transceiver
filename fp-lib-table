@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name custom_library)(type KiCad)(uri ${KIPRJMOD}/libraries/custom_library.pretty)(options "")(descr ""))
+  (lib (name benzen_logos)(type KiCad)(uri /home/benny/work/electronics/benzen-logos)(options "")(descr ""))
 )
